@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
+## the below funtions are used to make a matrix and return the inverse of it
 
-## Write a short comment describing this function
+## makeCacheMatrix function is used to make the matrix by taking the argment as matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -18,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## CacheSolve function will check the matrix and get the matrix from makeCacheMatrix and return the inverse of the matrix
 
 cacheSolve <- function(x, ...) { m <- x$getmean()
 if(!is.null(m)) {
@@ -26,9 +25,9 @@ if(!is.null(m)) {
   return(m)
 }
 data <- x$get()
-m <- mean(data, ...)
+m <- solve(data, ...)
 x$setmean(m)
 m
   
-        ## Return a matrix that is the inverse of 'x'
+        ##  a matrix that is the inverse of 'x' is returned
 }
